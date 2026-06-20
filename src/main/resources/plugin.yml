@@ -1,0 +1,7 @@
+name: Lumberjack
+version: '${version}'
+
+main: com.usmcsky.lumberjack.Lumberjack
+api-version: '1.21'
+
+authors: [ USMCsky ]
