@@ -1,16 +1,15 @@
 # Lumberjack — Spigot Plugin for Minecraft 1.21.11
 
-A lightweight Spigot plugin for Minecraft that removes the tedium of chopping down trees one block at a time. Break a log block and the plugin automatically removes the entire connected tree — making tree farming faster, cleaner, and much less repetitive.
+A lightweight Spigot plugin for Minecraft that removes the tedium of chopping down trees one block at a time. Break any log block and the entire connected tree is automatically chopped down — no more punching logs one by one.
 
 ---
 
 ## Features
 
-- **Instant tree felling** — breaking one log block chops down the full connected tree
-- **Supports natural tree shapes** — removes connected logs so you can clear trees quickly and consistently
-- **Creative mode support** — in Creative, the tree is cleared without drops
-- **Simple and lightweight** — built to do one job with minimal overhead
-- **Zero configuration** — no commands or config files required; just install the jar and play
+- **Instant tree chopping** — breaking one log block removes the full connected tree
+- **Full log support** — works on connected log blocks in natural trees
+- **Creative mode support** — in Creative, the tree is removed without drops
+- **Zero configuration** — no config files or commands needed; just drop in the jar and go
 
 ---
 
@@ -47,9 +46,9 @@ The compiled jar will be output to the `target/` directory.
 
 ## How It Works
 
-When a player breaks a log block, the plugin searches the surrounding connected blocks to find the rest of the tree and removes it automatically. This makes chopping down trees fast while still feeling natural in-game.
+When a player breaks a log block, the plugin performs a **breadth-first search** across connected log blocks to find every part of the tree. All connected logs are then removed automatically.
 
-In **Creative mode**, the tree is removed without generating drops.
+In **Creative mode**, the tree is cleared without generating drops.
 
 ---
 
